@@ -1,0 +1,210 @@
+body {
+  background-color: #ffff;
+  background-image: url(/images/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 106vh;
+  background: rgb(0, 0, 0, 0.3);
+}
+
+main  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.select-difficulty-type-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: start;
+  height: 50vh;
+  border-radius: 10px; 
+  background-color: #ffff;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  z-index: 1;
+}
+
+.select-difficulty-type-container > form > .start-game-form-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 0;
+  color: #25995C;
+}
+
+.select-difficulty-type-container > .start-game-form {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2rem;
+}
+
+.select-difficulty-type-container > form > .form-input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 80%;
+  margin-bottom: 1rem;
+}
+
+.select-difficulty-container {
+  margin-bottom: 1rem;
+}
+
+.form-select {
+  cursor: pointer;
+}
+
+.select-difficulty-type-button > button {
+  font-weight: bold;
+  padding: 1rem;
+  font-size: 15px;
+  margin-top: 1.5rem;
+  background-color: #25995C;
+}
+
+.select-difficulty-type-button > button:hover {
+  background-color: #1d7848;
+}
+
+/* Log in or Sign up form */
+.login-signup-form {
+  height: 100%; 
+  background-color: white; 
+
+  background-image: url(/images/login-form-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  border-top-right-radius: 10px; border-bottom-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  display: none;
+}
+
+.login-signup-form > .login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.form-header-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #25995C; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.input-auth {
+  border: 1px solid rgb(215, 214, 214);
+  outline: none;
+  width: 100%;
+}
+
+.input-group-password {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.password-eye-icon {
+  cursor: pointer;
+  display: flex;
+}
+.password-eye-icon:hover {
+  background-color: rgb(230, 225, 225);
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  border: 2px solid #25995C;
+}
+
+input[type="text"], input[type="password"] {
+  padding: 5px;
+}
+
+.login-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.login-signup-form > .login-form > .login-button > button {
+  font-weight: bold;
+  padding: 1rem;
+  margin-top: 1rem;
+  background-color: #25995C;
+}
+
+.login-signup-form > .login-form > .login-button > button:hover {
+  background-color: #1d7848;
+}
+
+.form-footer {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-footer a {
+  text-decoration: none;
+  color: #25995C;
+  user-select: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.form-footer a:hover {
+  color: #1d7848;
+  text-decoration: underline;
+}
+
+/* Arrow for close and open login form */
+.right-arrow {
+  display: flex;
+  justify-content: end;
+  position: relative;
+  top: 16px;
+  right: -17.5rem;
+}
+
+.bi-arrow-bar-right {
+  cursor: pointer;
+}
+
+.bi-arrow-bar-left {
+  cursor: pointer;
+  position: absolute;
+  right: 28.5rem;
+  top: 16rem;
+}
+
+.invalid-feedback {
+  color: red;
+  font-size: 13px;
+}

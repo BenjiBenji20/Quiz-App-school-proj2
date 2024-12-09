@@ -1,0 +1,155 @@
+.welcome-page {
+  background-image: url('/images/background.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  padding: 20px; 
+  padding-left: 100px;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  min-height: 100vh;
+  background-color: #F5F5DC;
+  background-blend-mode: multiply ;
+  /*filter: blur(2px); */
+}
+
+.left-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+  color: white;
+}
+
+.left-part h2 {
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.left-part p {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.left-part .welcome-bttn {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.welcome-bttn button {
+  border: 3px solid white;
+  font-weight: 600;
+}
+
+.right-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-top: -100px;
+}
+
+.right-part img {
+  box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+  width: 20rem;
+  height: 30rem;
+}
+
+.name-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  border: 1px solid black;
+}
+
+.first-profile-container, .second-profile-container {
+  border: 2px solid black;
+}
+
+.profile-content {
+  /* Remove border */
+  /* border: 2px solid black; */
+  
+  /* Add box-shadow */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 50px 100px 50px 100px;
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+
+.text-container p {
+  text-align: justify;
+  margin-bottom: 30px;
+  width: 40vw;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.text-container i {
+  font-size: 18px;
+}
+
+.Icon-container a {
+  text-decoration: none;
+}
+
+.card {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: start;  
+  width: 48%;
+}
+
+.card p {
+  margin: 20px 20px 50px 20px;
+}
+
+.card h5 {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+ 
+.card a {
+  margin-top: 20px;
+}
+
+.button-top {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  padding-right: 100px;
+}
+
+#button-top {
+  box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.5);
+}
+
+.body-html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+footer {
+  margin-top: 0; /* Remove margin at the top of the footer */
+  padding-top: 0; /* Ensure no extra padding at the top */
+}
+
+.main {
+  margin-bottom: 0; /* If main has any bottom margin, remove it */
+  padding-bottom: 0; /* Ensure no extra padding */
+}

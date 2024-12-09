@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/header-logo.png">
+
+  <!--Bootstrap Link-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- CSS Links -->
+  <link rel="stylesheet" href="/stylesheets/default.css">
+  <link rel="stylesheet" href="/stylesheets/start-game.css">
+  <title>Select SciQuiz</title>
+</head>
+  <body>
+
+    <div class="content-wrap">
+      <!-- START OF HEADER -->
+      <%- include('./includes/header') -%>
+      <!-- END OF HEADER -->
+      <%- include('./includes/profile-nav') -%>
+      <!-- STARTS OF MAIN -->
+      <main>
+        <div class="select-difficulty-type-container">
+          <div class="right-arrow">
+            <i class="bi bi-arrow-bar-right" title="open login form"></i>
+          </div>
+          <!-- START OF FORM FOR SELECTION OF DIFFICULTY AND TYPE -->
+          <form action="/fetch-data" method="POST" class="start-game-form">
+            <div class="start-game-form-title">SciQuiz</div>
+            <div class="form-input-container">
+              <div class="select-difficulty-container">
+                <label for="difficulty">SELECT DIFFICULTY OF QUESTIONS</label>
+                <select class="form-select" aria-label="Default select example" id="select-difficulty" name="difficulty" required>
+                  <% difficulty.forEach(difficulties => { %>
+                    <option value="<%= difficulties.value %>"><%= difficulties.name %></option>
+                  <% }); %>
+                </select>
+              </div>
+  
+              <div class="select-type-container">
+                <label for="difficulty">SELECT TYPE OF QUESTIONS</label>
+                <select class="form-select" aria-label="Default select example" id="select-type" name="type" required>
+                  <% type.forEach(types => { %>
+                    <option value="<%= types.value %>"><%= types.name %></option>
+                  <% }); %>
+                </select>
+              </div>
+            </div>
+
+            <div class="select-difficulty-type-button">
+              <button type="submit" class="btn btn-success">
+                <% if(!isAuthenticated) { %>
+                  QUIZ AS GUEST
+                <% } else { %> 
+                  START QUIZ!
+                <% } %>
+              </button>
+            </div>
+          </form>
+ 
+          <!-- Login form -->
+            <% if(!isAuthenticated) { %> <!-- if user isn't logged in, then display the login form -->
+              <div class="login-signup-form">
+                <div class="left-arrow">
+                  <i class="bi bi-arrow-bar-left" title="close login form"></i>
+                </div>
+                <form action="/user-auth" method="POST" class="login-form">
+                  <div class="form-header-title">Login Now</div>
+    
+                  <label for="username">USERNAME</label>
+                  <input type="text" name="username" class="input-auth" placeholder="Username" required>
+    
+                  <label for="password" style="margin-top: 2px;">PASSWORD</label>
+                  <div class="input-group-password">
+                    <span class="input-group-text password-eye-icon" id="inputGroupPrepend">
+                      <i class="bi bi-eye-slash eye" title="show password"></i>
+                    </span>
+                    <input type="password" name="password" class="input-auth" id="input-auth" placeholder="Password" required>
+                  </div>
+    
+                  <div class="login-button">
+                    <button type="submit" class="btn btn-success">LOGIN</button>
+                    <div class="invalid-feedback">dasdasd</div>
+                  </div>
+                </form>
+                <div class="form-footer">
+                  <a href="/register-page">
+                    <span class="signup-link">Doesn't have an account? Click to Signup</span>
+                  </a>
+                </div>  
+              </div>
+            <%} %>
+        </div>
+      </main>
+      <!-- END OF MAIN -->
+        
+      <!-- START OF FOOTER -->
+      <footer>
+        <%- include('./includes/footer') -%>
+      </footer>
+      <!-- END OF FOOTER -->
+    </div>
+
+    <script src="/javascripts/form-open.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

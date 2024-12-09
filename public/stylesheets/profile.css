@@ -1,0 +1,134 @@
+main {
+  padding: 1rem 8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-details-and-login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-details, .login-form  {
+  margin-right: 1rem;
+  border-radius: 10px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  height: 50%;
+  width: 90%;
+  margin-bottom: 1rem;
+}
+
+.user-details .title, .start-game-form-title {
+  width: 100%;
+  background-color: #4caf50;
+  color: #ffff;
+  font-weight: 700;
+  padding: 5px;
+  border-top-right-radius: 8px; border-top-left-radius: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+.user-details > .content, .form-input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80%;
+  padding-top: 10px; padding-left: 10px; padding-bottom: 10px; padding-right: 10px;
+  margin-top: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.user-details > .content > span {
+  font-size: 14px;
+}
+
+/* General container styling */
+.leader-board-container {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  font-family: Arial, sans-serif;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.leader-board-container .title h3 {
+  width: 100%;
+  background-color: #4caf50;
+  color: #ffff;
+  font-weight: 700;
+  padding: 0.8rem;
+  border-top-right-radius: 8px; border-top-left-radius: 8px;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0.1rem;
+}
+
+.leader-board-container .content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+  gap: 10px;
+}
+
+.content-list div {
+  text-align: center;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.column {
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.content-list:nth-child(even) {
+  background-color: #f3f3f3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .leader-board-container .content {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
+  }
+  .column {
+    font-size: 14px;
+  }
+}
+
+.select-difficulty-type-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.logout-button {
+  display: flex;
+  justify-content: end;
+  cursor: pointer;
+  position: relative;
+  right: 8.7rem;
+}
+
+.logout-button a {
+  text-decoration: none;
+  color: #ffff;
+  background-color: #4caf50;
+  padding: 5px;
+  border-radius: 2px;
+  font-size: 15px;
+}

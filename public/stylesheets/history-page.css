@@ -1,0 +1,306 @@
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+
+.hovereffect .overlay {
+  position: absolute;
+  overflow: hidden;
+  width: 67%;
+  height: 80%;
+  left: 10%;
+  top: 10%;
+  border-bottom: 1px solid #FFF;
+  border-top: 1px solid #FFF;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0,1);
+  -ms-transform: scale(0,1);
+  transform: scale(0,1);
+}
+
+.hovereffect:hover .overlay {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.hovereffect img {
+  display: block;
+  position: relative;
+  width: 20vw;
+  height: 70vh;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+.hovereffect:hover img {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
+  filter: brightness(0.6);
+  -webkit-filter: brightness(0.6);
+}
+
+.hovereffect h2 {
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  background-color: transparent;
+  color: #FFF;
+  padding: 1em 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0,-100%,0);
+  transform: translate3d(0,-100%,0);
+}
+
+.hovereffect a, .hovereffect p {
+  color: #FFF;
+  padding: 1em 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0,100%,0);
+  transform: translate3d(0,100%,0);
+  text-decoration: none;
+}
+
+.hovereffect:hover a, .hovereffect:hover p, .hovereffect:hover h2 {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+
+
+
+/* ______________________________________________________________ */
+main   {
+  overflow-x: hidden;
+}
+
+main > .content-container > .select-category-section-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2rem;
+  padding: 0 5rem;
+
+}
+
+main > .content-container > .intro-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+main > .content-container > .intro-text h3 {
+  font-size: 2rem;
+}
+
+main > .content-container > .select-category-section-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+main > .content-container > .select-category-section-footer > .links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+}
+.bi-facebook {
+  color: blue;
+  cursor: pointer;
+}
+.bi-instagram {
+  color: rgb(255, 0, 119);
+  cursor: pointer;
+}
+.bi-twitter {
+  cursor: pointer;
+  color: rgb(0, 128, 255);
+}
+.bi-github {
+  cursor: pointer;
+  color: black;
+}
+
+.category-astronomy-container {
+  height: 150vh;
+  width: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.908);
+}
+
+.category-astronomy-container > .intro-text {
+ padding: 2rem;
+ font-size: 2rem;
+ display: flex;
+ justify-content: center;
+}
+
+.category-astronomy-images {
+  position: relative;
+  left: 33%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 50rem; /* Ensure proper size of the container */
+  overflow: visible; /* Allow overflow if needed */
+}
+
+.category-astronomy-images > .profile-image {
+  position: relative;
+  right: 20%;
+  top: 1rem;
+}
+
+.category-astronomy-images > .profile-image img {
+  border-radius: 100%;
+  height: 15rem;
+}
+
+.hover-image {
+  width: 75%;
+  height: auto;
+  transition: all 0.3s ease;
+  margin-bottom: 5rem;
+}
+
+.hover-text {
+  position: absolute;
+  top: 10px;
+  width: 50rem;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 15px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.hover-text > p {
+  text-align: justify;
+}
+
+.category-astronomy-images:hover .hover-text {
+  opacity: 1;
+  visibility: visible;
+  left: -220px; /* Show the text smoothly */
+}
+
+.category-astronomy-images:hover .hover-image {
+  transform: scale(1.05); /* Optional zoom on hover */
+}
+
+.content-container > .category-ecology-container {
+  padding: 1rem 5rem;
+}
+
+.content-container > .category-ecology-container > .intro-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+.carousel-item img {
+  height: 85vh;
+  border-radius: 20px;
+  filter: brightness(75%);
+}
+
+.category-environmental-container {
+  padding: 1rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.category-environmental-container > .intro-text h3 {
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.right-par {
+  width: 50%;
+  text-align: justify;
+}
+
+.right-par > h4{
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+.right-par > p {
+  font-size: 17px;
+}
+
+
+.gallery {
+  --g: 6px; /* the gap */
+  
+  display: grid;
+  width: 550px; /* the size */
+  aspect-ratio: 1;
+  grid: auto-flow 1fr/repeat(3,1fr);
+  gap: var(--g);
+  position: relative;
+  left: 0;
+}
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale();
+  cursor: pointer;
+  transition: .5s
+}
+.gallery img:hover {
+  filter: grayscale(0);
+}
+.gallery img:nth-child(2) {
+  grid-area: 1/2/span 2/span 2;
+  clip-path: polygon(0 0,100% 0,100% 100%,calc(50% + var(--g)/4) 100%,0 calc(50% - var(--g)/4))
+}
+.gallery img:nth-child(3) {
+  grid-area: 2/1/span 2/span 2;
+  clip-path: polygon(0 0,calc(50% - var(--g)/4) 0,100% calc(50% + var(--g)/4),100% 100%,0 100%);
+}
+
